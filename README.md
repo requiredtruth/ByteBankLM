@@ -20,3 +20,12 @@ The JSON result is stable for scripts and records why each job was admitted or h
 Donations increase RequiredTruth development production. See [SUPPORT.md](SUPPORT.md); confirmed donors may claim a transaction hash in an issue and request a specific direction.
 
 Apache-2.0 licensed.
+
+
+## Install and run
+
+```sh
+chmod +x install.sh run.sh
+./install.sh
+./run.sh --help
+```
