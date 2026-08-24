@@ -1,0 +1,1 @@
+{"ram_bytes":12884901888,"reserve_bytes":2147483648,"jobs":[{"name":"chat","weight_bytes":2147483648,"context":4096,"layers":24,"kv_heads":8,"head_dim":128,"priority":10},{"name":"coder","weight_bytes":3221225472,"context":8192,"layers":32,"kv_heads":8,"head_dim":128,"kv_element_bytes":1,"priority":5}]}
