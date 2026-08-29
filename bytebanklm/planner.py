@@ -22,8 +22,8 @@ class Job:
     priority: int = 0
 
     def __post_init__(self) -> None:
-        if not self.name.strip():
-            raise ValueError("job name cannot be empty")
+        if not isinstance(self.name, str) or not self.name.strip():
+            raise ValueError("job name must be a non-empty string")
         for field in ("weight_bytes", "context", "layers", "kv_heads", "head_dim", "kv_element_bytes"):
             _positive(getattr(self, field), field)
         _positive(self.runtime_overhead_bytes, "runtime_overhead_bytes", zero=True)
