@@ -22,5 +22,9 @@ class PlannerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unique"):
             plan_jobs(4000, 0, [self.job("same", 1), self.job("same", 1)])
 
+    def test_rejects_non_string_name(self) -> None:
+        with self.assertRaisesRegex(ValueError, "non-empty string"):
+            self.job(123, 1)  # type: ignore[arg-type]
+
 if __name__ == "__main__":
     unittest.main()
